@@ -1,7 +1,7 @@
 # Seraph <img src="https://github.com/Zaliro/seraph-app/blob/main/src/assets/icon.png?raw=true" width="60">
 [![runs with expo](https://img.shields.io/badge/Runs%20with%20Expo-4630EB.svg?style=flat&logo=EXPO&labelColor=f3f3f3&logoColor=000)](https://github.com/expo/expo) [![supports iOS](https://img.shields.io/badge/iOS-4630EB.svg?style=flat-square&logo=APPLE&labelColor=999999&logoColor=fff)](https://itunes.apple.com/app/apple-store/id982107779) [![supports Android](https://img.shields.io/badge/Android-4630EB.svg?style=flat-square&logo=ANDROID&labelColor=A4C639&logoColor=fff)](https://play.google.com/store/apps/details?id=host.exp.exponent&referrer=www)
 
-Seraph is an open-source application allowing ou to follow various information on Switcheo including your staking
+Seraph is an open-source application allowing you to follow various information on Switcheo including your staking
 
 **If you think something is broken, something is missing or have any questions, please open an [Issue](https://github.com/Zaliro/seraph-app/issues)**
 
