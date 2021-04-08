@@ -52,7 +52,9 @@ export function StakingScreen() {
       const validator = validators.find((x) => x.OperatorAddress === validatorAddr).Description.moniker ?? "Unknown"
 
       const denom = delegation.balance.denom
+
       let amount = new BigNumber(delegation.balance.amount)
+      if (!amount.comparedTo(0)) continue
       if (denom === "swth") amount = amount.shiftedBy(-8)
 
       delegationsFormat.push({
@@ -73,6 +75,7 @@ export function StakingScreen() {
       const validator = validators.find((x) => x.OperatorAddress === validatorAddr).Description.moniker ?? "Unknown"
 
       const validatorRewards = reward.reward
+      if (!validatorRewards) continue
 
       for (let validatorReward of validatorRewards) {
         const denom = validatorReward.denom
