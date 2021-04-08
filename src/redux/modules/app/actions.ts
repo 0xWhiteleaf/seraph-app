@@ -1,14 +1,14 @@
 import { constants } from "@src/constants"
+import { Screen } from "@src/enums"
+import { AppSettings } from "@src/models/app-settings"
 import { useCoinGeckoClient } from "@src/services/coingecko-service"
+import { saveAddress, saveLaunchScreen } from "@src/services/storage-service"
+import { useSwitcheoClient } from "@src/services/switcheo-service"
 import { useTendermintClient, useTradescanClient } from "@src/services/tradehub-service"
 import BigNumber from "bignumber.js"
-import { StakingPool } from "tradehub-api-js"
 import { Base64 } from "js-base64"
-import { useSwitcheoClient } from "@src/services/switcheo-service"
+import { StakingPool } from "tradehub-api-js"
 import { AppAction, AppActionsTypes, AppThunk } from "./types"
-import { AppSettings } from "@src/models/app-settings"
-import { Screen } from "@src/enums"
-import { saveAddress, saveLaunchScreen } from "@src/services/storage-service"
 
 export function setAppSettings(appSettings: AppSettings): AppAction {
   return {

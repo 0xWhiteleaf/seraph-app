@@ -1,6 +1,6 @@
-import { Screen } from "@src/enums";
+import { Screen } from "@src/enums"
 
 export interface AppSettings {
-  address: string | null;
-  launchScreen: Screen;
+  address: string | null
+  launchScreen: Screen
 }

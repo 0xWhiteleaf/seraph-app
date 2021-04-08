@@ -1,25 +1,25 @@
+import { Ionicons } from "@expo/vector-icons"
+import { createMaterialBottomTabNavigator } from "@react-navigation/material-bottom-tabs"
+import { DarkTheme as ReactNavigationDarkTheme, NavigationContainer } from "@react-navigation/native"
+import { createStackNavigator } from "@react-navigation/stack"
+import { store, useRootDispatch, useRootSelector } from "@src/redux"
+import { AboutScreen } from "@src/screens/AboutScreen"
+import { DashboardScreen } from "@src/screens/DashboardScreen"
+import { StakingScreen } from "@src/screens/StakingScreen"
+import AppLoading from "expo-app-loading"
 import * as Analytics from "expo-firebase-analytics"
 import { StatusBar } from "expo-status-bar"
 import React, { useRef, useState } from "react"
-import { NavigationContainer, DarkTheme as ReactNavigationDarkTheme } from "@react-navigation/native"
-import { createStackNavigator } from "@react-navigation/stack"
-import { createMaterialBottomTabNavigator } from "@react-navigation/material-bottom-tabs"
-import { DarkTheme as ReactNativePaperDarkTheme, Provider as PaperProvider, Appbar, useTheme } from "react-native-paper"
-import { StyleSheet, Image } from "react-native"
-import { Ionicons } from "@expo/vector-icons"
-import { DashboardScreen } from "@src/screens/DashboardScreen"
-import { StakingScreen } from "@src/screens/StakingScreen"
-import { AboutScreen } from "@src/screens/AboutScreen"
+import { Image, StyleSheet } from "react-native"
+import { Appbar, DarkTheme as ReactNativePaperDarkTheme, Provider as PaperProvider, useTheme } from "react-native-paper"
 import { Provider } from "react-redux"
-import { store, useRootDispatch, useRootSelector } from "@src/redux"
-import { SettingsScreen } from "./screens/SettingsScreen"
 import { constants } from "./constants"
-import AppLoading from "expo-app-loading"
-import { getAppSettings } from "./services/storage-service"
-import { refreshCoinsList, refreshValidators, setAppSettings } from "./redux/modules/app/actions"
-import { WalletScreen } from "./screens/WalletScreen"
 import { getRouteByScreen } from "./helpers"
 import { useWallet } from "./hooks"
+import { refreshCoinsList, refreshValidators, setAppSettings } from "./redux/modules/app/actions"
+import { SettingsScreen } from "./screens/SettingsScreen"
+import { WalletScreen } from "./screens/WalletScreen"
+import { getAppSettings } from "./services/storage-service"
 
 const Tab = createMaterialBottomTabNavigator()
 
@@ -95,7 +95,7 @@ export default function App() {
 
   const navigationRef = useRef<any>()
   const routeNameRef = useRef<any>()
-  
+
   return (
     <Provider store={store}>
       {!isReady ? (
@@ -156,7 +156,7 @@ const theme = {
   roundness: 10,
   colors: {
     ...ReactNativePaperDarkTheme.colors,
-    links: "#1976d2"
+    links: "#1976d2",
   },
   /*
   colors: {

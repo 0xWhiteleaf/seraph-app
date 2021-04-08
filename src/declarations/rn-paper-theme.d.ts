@@ -1,5 +1,5 @@
 namespace ReactNativePaper {
   interface ThemeColors {
-    links: string;
+    links: string
   }
 }

@@ -1,7 +1,7 @@
-import { AppState } from "./app/reducer";
-import appReducer from "./app/reducer";
+import { AppState } from "./app/reducer"
+import appReducer from "./app/reducer"
 
-export { AppState, appReducer };
+export { AppState, appReducer }
 
-export * from "./app/actions";
-export * from "./app/types";
+export * from "./app/actions"
+export * from "./app/types"

@@ -1,4 +1,4 @@
-import BigNumber from "bignumber.js";
+import BigNumber from "bignumber.js"
 
 export const constants: Constants = {
   // ROUTES
@@ -53,31 +53,31 @@ export const constants: Constants = {
   SERAPH_TELEGRAM_LINK: "https://t.me/seraph_staking",
   SERAPH_DISCORD_LINK: "https://discord.com/invite/SPh62Hf",
   SERAPH_KEYBASE_LINK: "https://keybase.io/seraph_staking",
-};
+}
 
 export interface Constants {
-  SCREEN_HOME_ROUTE: string;
-  SCREEN_SETTINGS_ROUTE: string;
-  SCREEN_HOME_DASHBOARD_ROUTE: string;
-  SCREEN_HOME_WALLET_ROUTE: string;
-  SCREEN_HOME_STAKING_ROUTE: string;
-  SCREEN_HOME_ABOUT_ROUTE: string;
-  TENDERMINT_API_BLOCK_RESULTS_ENDPOINT: string;
-  SWITCHEO_API_BASE_URL: string;
-  SWITCHEO_API_NATIVE_TOKEN_SUPPLY_ENDPOINT: string;
-  COINGECKO_API_BASE_URL: string;
-  COINGECKO_API_SIMPLE_PRICE_ENDPOINT: string;
-  COINGECKO_API_COINS_LIST: string;
-  PRICE_PRECISION: number;
-  BLOCK_TIME_PRECISION: number;
-  TOKENS_LOGOS: Record<string, string>;
-  SECONDS_IN_A_YEAR: BigNumber;
-  STORAGE_KEY_ADDRESS: string;
-  STORAGE_KEY_LAUNCH_SCREEN: string;
-  SERAPH_WEBSITE_LINK: string;
-  SERAPH_TWITTER_LINK: string;
-  SERAPH_TELEGRAM_LINK: string;
-  SERAPH_DISCORD_LINK: string;
-  SERAPH_KEYBASE_LINK: string;
-  TENDERMIN_API_BASE_URL: string;
+  SCREEN_HOME_ROUTE: string
+  SCREEN_SETTINGS_ROUTE: string
+  SCREEN_HOME_DASHBOARD_ROUTE: string
+  SCREEN_HOME_WALLET_ROUTE: string
+  SCREEN_HOME_STAKING_ROUTE: string
+  SCREEN_HOME_ABOUT_ROUTE: string
+  TENDERMINT_API_BLOCK_RESULTS_ENDPOINT: string
+  SWITCHEO_API_BASE_URL: string
+  SWITCHEO_API_NATIVE_TOKEN_SUPPLY_ENDPOINT: string
+  COINGECKO_API_BASE_URL: string
+  COINGECKO_API_SIMPLE_PRICE_ENDPOINT: string
+  COINGECKO_API_COINS_LIST: string
+  PRICE_PRECISION: number
+  BLOCK_TIME_PRECISION: number
+  TOKENS_LOGOS: Record<string, string>
+  SECONDS_IN_A_YEAR: BigNumber
+  STORAGE_KEY_ADDRESS: string
+  STORAGE_KEY_LAUNCH_SCREEN: string
+  SERAPH_WEBSITE_LINK: string
+  SERAPH_TWITTER_LINK: string
+  SERAPH_TELEGRAM_LINK: string
+  SERAPH_DISCORD_LINK: string
+  SERAPH_KEYBASE_LINK: string
+  TENDERMIN_API_BASE_URL: string
 }

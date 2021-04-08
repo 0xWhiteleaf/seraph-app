@@ -1,13 +1,12 @@
-import React, { useEffect, useMemo, useState } from "react"
-import { useTheme, DataTable, Text, Subheading, Title, Caption } from "react-native-paper"
-import { RefreshControl, StyleSheet } from "react-native"
-import { View, ScrollView, Image } from "react-native"
-import { useRootDispatch, useRootSelector } from "@src/redux"
-import { refreshPrices, refreshStaking } from "@src/redux/modules"
 import { constants } from "@src/constants"
-import BigNumber from "bignumber.js"
 import { getShiftedAmount } from "@src/helpers"
 import { useWallet } from "@src/hooks"
+import { useRootDispatch, useRootSelector } from "@src/redux"
+import { refreshPrices, refreshStaking } from "@src/redux/modules"
+import BigNumber from "bignumber.js"
+import React, { useEffect, useMemo, useState } from "react"
+import { Image, RefreshControl, ScrollView, StyleSheet, View } from "react-native"
+import { Caption, DataTable, Subheading, Text, Title, useTheme } from "react-native-paper"
 
 export function StakingScreen() {
   const dispatch = useRootDispatch()
@@ -150,7 +149,7 @@ export function StakingScreen() {
         <Caption>{address ?? "No address"}</Caption>
       </View>
 
-      <View style={[styles.tableWrapper, { marginTop: 6 } ]}>
+      <View style={[styles.tableWrapper, { marginTop: 6 }]}>
         <Title>Staked Balance</Title>
         <DataTable>
           <DataTable.Header>
@@ -207,7 +206,7 @@ const styles = StyleSheet.create({
   addressWrapper: {
     flex: 1,
     alignItems: "center",
-    marginBottom: 0
+    marginBottom: 0,
   },
   tableWrapper: {
     flex: 1,

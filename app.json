@@ -34,7 +34,17 @@
       "backgroundColor": "#1f1f1f"
     },
     "web": {
-      "favicon": "./src/assets/favicon.png"
+      "favicon": "./src/assets/favicon.png",
+      "config": {
+        "firebase": {
+          "apiKey": "AIzaSyC8Bmgb1faMYGCAXEF49q9Y14DOhXMcjKo",
+          "authDomain": "seraph-727c5.firebaseapp.com",
+          "projectId": "seraph-727c5",
+          "messagingSenderId": "493253334591",
+          "appId": "1:493253334591:web:58742994248f6d0e6a4a8a",
+          "measurementId": "G-QFHVGZ8F98"
+        }
+      }
     }
   }
 }

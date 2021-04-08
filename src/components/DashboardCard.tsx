@@ -1,20 +1,15 @@
-import React from "react";
-import { StyleSheet } from "react-native";
-import { Card, Title, Text, Caption } from "react-native-paper";
+import React from "react"
+import { StyleSheet } from "react-native"
+import { Card, Title, Text, Caption } from "react-native-paper"
 
 export interface DashboardCardProps {
-  style?: any;
-  title: string;
-  value: string;
-  caption: string;
+  style?: any
+  title: string
+  value: string
+  caption: string
 }
 
-export function DashboardCard({
-  style,
-  title,
-  value,
-  caption,
-}: DashboardCardProps) {
+export function DashboardCard({ style, title, value, caption }: DashboardCardProps) {
   return (
     <Card style={style}>
       <Card.Content>
@@ -23,7 +18,7 @@ export function DashboardCard({
         <Caption style={styles.caption}>{caption}</Caption>
       </Card.Content>
     </Card>
-  );
+  )
 }
 
 const styles = StyleSheet.create({
@@ -38,4 +33,4 @@ const styles = StyleSheet.create({
   caption: {
     textAlign: "center",
   },
-});
+})

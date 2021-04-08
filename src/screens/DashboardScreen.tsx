@@ -1,11 +1,10 @@
-import React, { useEffect, useMemo, useState } from "react"
-import { useTheme } from "react-native-paper"
-import { StyleSheet, Dimensions, RefreshControl } from "react-native"
-import { View, ScrollView } from "react-native"
 import { DashboardCard } from "@src/components/DashboardCard"
 import { useRootDispatch, useRootSelector } from "@src/redux"
 import { refreshDashboard } from "@src/redux/modules/app/actions"
 import BigNumber from "bignumber.js"
+import React, { useEffect, useMemo, useState } from "react"
+import { Dimensions, RefreshControl, ScrollView, StyleSheet, View } from "react-native"
+import { useTheme } from "react-native-paper"
 
 export function DashboardScreen() {
   const { colors } = useTheme()

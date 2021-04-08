@@ -1,7 +1,7 @@
 import { useFocusEffect, useNavigation } from "@react-navigation/core"
 import { constants, messages } from "@src/constants"
 import { useRootSelector } from "@src/redux"
-import { useEffect, useMemo } from "react"
+import { useMemo } from "react"
 import { Alert } from "react-native"
 
 export interface UseWalletArgs {

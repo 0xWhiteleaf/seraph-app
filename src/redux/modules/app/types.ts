@@ -1,8 +1,8 @@
-import { Screen } from "@src/enums";
-import { AppSettings } from "@src/models/app-settings";
-import { RootState } from "@src/redux";
-import BigNumber from "bignumber.js";
-import { ThunkAction } from "redux-thunk";
+import { Screen } from "@src/enums"
+import { AppSettings } from "@src/models/app-settings"
+import { RootState } from "@src/redux"
+import BigNumber from "bignumber.js"
+import { ThunkAction } from "redux-thunk"
 
 export enum AppActionsTypes {
   SET_APP_SETTINGS = "SET_APP_SETTINGS",
@@ -42,141 +42,141 @@ export enum AppActionsTypes {
 }
 
 export interface SetAppSettingsAction {
-  type: typeof AppActionsTypes.SET_APP_SETTINGS;
-  appSettings: AppSettings;
+  type: typeof AppActionsTypes.SET_APP_SETTINGS
+  appSettings: AppSettings
 }
 
 export interface UpdateAddressAction {
-  type: typeof AppActionsTypes.UPDATE_ADDRESS;
+  type: typeof AppActionsTypes.UPDATE_ADDRESS
 }
 
 export interface SetAddressAction {
-  type: typeof AppActionsTypes.SET_ADDRESS;
-  address: string;
+  type: typeof AppActionsTypes.SET_ADDRESS
+  address: string
 }
 
 export interface UpdateLaunchScreenAction {
-  type: typeof AppActionsTypes.UPDATE_LAUNCH_SCREEN;
+  type: typeof AppActionsTypes.UPDATE_LAUNCH_SCREEN
 }
 
 export interface SetLaunchScreenAction {
-  type: typeof AppActionsTypes.SET_LAUNCH_SCREEN;
-  launchScreen: Screen;
+  type: typeof AppActionsTypes.SET_LAUNCH_SCREEN
+  launchScreen: Screen
 }
 
 export interface RefreshValidatorsAction {
-  type: typeof AppActionsTypes.REFRESH_VALIDATORS;
+  type: typeof AppActionsTypes.REFRESH_VALIDATORS
 }
 
 export interface SetValidatorsAction {
-  type: typeof AppActionsTypes.SET_VALIDATORS;
-  validators: Array<any>;
-  totalBonded: BigNumber;
+  type: typeof AppActionsTypes.SET_VALIDATORS
+  validators: Array<any>
+  totalBonded: BigNumber
 }
 
 export interface RefreshCoinsListAction {
-  type: typeof AppActionsTypes.REFRESH_COINS_LIST;
+  type: typeof AppActionsTypes.REFRESH_COINS_LIST
 }
 
 export interface SetCoinsListAction {
-  type: typeof AppActionsTypes.SET_COINS_LIST;
-  coins: any;
+  type: typeof AppActionsTypes.SET_COINS_LIST
+  coins: any
 }
 
 export interface RefreshStakingAction {
-  type: typeof AppActionsTypes.REFRESH_STAKING;
+  type: typeof AppActionsTypes.REFRESH_STAKING
 }
 
 export interface RefreshRewardsAction {
-  type: typeof AppActionsTypes.REFRESH_REWARDS;
+  type: typeof AppActionsTypes.REFRESH_REWARDS
 }
 
 export interface SetRewardsAction {
-  type: typeof AppActionsTypes.SET_REWARDS;
-  rewards: any;
+  type: typeof AppActionsTypes.SET_REWARDS
+  rewards: any
 }
 
 export interface RefreshDelegationsAction {
-  type: typeof AppActionsTypes.REFRESH_DELEGATIONS;
+  type: typeof AppActionsTypes.REFRESH_DELEGATIONS
 }
 
 export interface SetDelegationsAction {
-  type: typeof AppActionsTypes.SET_DELEGATIONS;
-  delegations: any;
+  type: typeof AppActionsTypes.SET_DELEGATIONS
+  delegations: any
 }
 
 export interface RefreshBalanceAction {
-  type: typeof AppActionsTypes.REFRESH_BALANCE;
+  type: typeof AppActionsTypes.REFRESH_BALANCE
 }
 
 export interface SetBalanceAction {
-  type: typeof AppActionsTypes.SET_BALANCE;
-  balance: any;
+  type: typeof AppActionsTypes.SET_BALANCE
+  balance: any
 }
 
 export interface RefreshTokensAction {
-  type: typeof AppActionsTypes.REFRESH_TOKENS;
+  type: typeof AppActionsTypes.REFRESH_TOKENS
 }
 
 export interface SetTokensAction {
-  type: typeof AppActionsTypes.SET_TOKENS;
-  tokens: any;
+  type: typeof AppActionsTypes.SET_TOKENS
+  tokens: any
 }
 
 export interface RefreshDashboardAction {
-  type: typeof AppActionsTypes.REFRESH_DASHBOARD;
+  type: typeof AppActionsTypes.REFRESH_DASHBOARD
 }
 
 export interface RefreshPricesAction {
-  type: typeof AppActionsTypes.REFRESH_PRICES;
+  type: typeof AppActionsTypes.REFRESH_PRICES
 }
 
 export interface SetPricesAction {
-  type: typeof AppActionsTypes.SET_PRICES;
-  prices: any;
+  type: typeof AppActionsTypes.SET_PRICES
+  prices: any
 }
 
 export interface RefreshSupplyAction {
-  type: typeof AppActionsTypes.REFRESH_SUPPLY;
+  type: typeof AppActionsTypes.REFRESH_SUPPLY
 }
 
 export interface SetSupplyAction {
-  type: typeof AppActionsTypes.SET_SUPPLY;
-  totalSupply: BigNumber;
-  mktCap: BigNumber;
+  type: typeof AppActionsTypes.SET_SUPPLY
+  totalSupply: BigNumber
+  mktCap: BigNumber
 }
 
 export interface RefreshStakingPoolAction {
-  type: typeof AppActionsTypes.REFRESH_STAKING_POOL;
+  type: typeof AppActionsTypes.REFRESH_STAKING_POOL
 }
 
 export interface SetStakingPoolAction {
-  type: typeof AppActionsTypes.SET_STAKING_POOL;
-  totalStaked: BigNumber;
+  type: typeof AppActionsTypes.SET_STAKING_POOL
+  totalStaked: BigNumber
 }
 
 export interface PoolBlocksAction {
-  type: typeof AppActionsTypes.POOL_BLOCKS;
+  type: typeof AppActionsTypes.POOL_BLOCKS
 }
 
 export interface SetBlocksAction {
-  type: typeof AppActionsTypes.SET_BLOCKS;
-  blocks: any;
+  type: typeof AppActionsTypes.SET_BLOCKS
+  blocks: any
 }
 
 export interface SetAvgRewardAction {
-  type: typeof AppActionsTypes.SET_AVG_REWARD;
-  avgReward: BigNumber;
+  type: typeof AppActionsTypes.SET_AVG_REWARD
+  avgReward: BigNumber
 }
 
 export interface RefreshBlockTimeAction {
-  type: typeof AppActionsTypes.REFRESH_BLOCK_TIME;
+  type: typeof AppActionsTypes.REFRESH_BLOCK_TIME
 }
 
 export interface SetBlockTimeAction {
-  type: typeof AppActionsTypes.SET_BLOCK_TIME;
-  blockTime: string;
-  apr: string;
+  type: typeof AppActionsTypes.SET_BLOCK_TIME
+  blockTime: string
+  apr: string
 }
 
 export type AppAction =
@@ -206,11 +206,6 @@ export type AppAction =
   | SetBlocksAction
   | SetAvgRewardAction
   | RefreshBlockTimeAction
-  | SetBlockTimeAction;
+  | SetBlockTimeAction
 
-export type AppThunk = ThunkAction<
-  Promise<void>,
-  RootState,
-  unknown,
-  AppAction
->;
+export type AppThunk = ThunkAction<Promise<void>, RootState, unknown, AppAction>

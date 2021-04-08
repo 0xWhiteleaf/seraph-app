@@ -1,68 +1,46 @@
-import React from "react";
-import {
-  useTheme,
-  Headline,
-  Button,
-  Paragraph,
-} from "react-native-paper";
-import { StyleSheet, TouchableOpacity } from "react-native";
-import { View, ScrollView, Image } from "react-native";
-import { FontAwesome5 } from "@expo/vector-icons";
-import Color from "color";
-import { Anchor } from "@src/components/Anchor";
-import { constants } from "@src/constants";
-import * as Linking from "expo-linking";
+import { FontAwesome5 } from "@expo/vector-icons"
+import { Anchor } from "@src/components/Anchor"
+import { constants } from "@src/constants"
+import Color from "color"
+import * as Linking from "expo-linking"
+import React from "react"
+import { Image, ScrollView, StyleSheet, TouchableOpacity, View } from "react-native"
+import { Button, Headline, Paragraph, useTheme } from "react-native-paper"
 
 export function AboutScreen() {
-  const { colors } = useTheme();
+  const { colors } = useTheme()
   const linksButtonBgColor = {
     backgroundColor: Color(colors.surface).lighten(1.4).hex(),
-  };
+  }
 
   const openUrl = (href: string) => {
-    Linking.openURL(href);
-  };
+    Linking.openURL(href)
+  }
 
   return (
-    <ScrollView
-      style={[styles.scrollView, { backgroundColor: colors.background }]}
-      contentContainerStyle={styles.content}
-    >
+    <ScrollView style={[styles.scrollView, { backgroundColor: colors.background }]} contentContainerStyle={styles.content}>
       <View style={styles.logoWrapper}>
         <Image style={styles.logo} source={require("../assets/logo.png")} />
       </View>
 
       <View style={styles.linksWrapper}>
-        <TouchableOpacity
-          style={[styles.linksButton, linksButtonBgColor]}
-          onPress={() => openUrl(constants.SERAPH_WEBSITE_LINK)}
-        >
+        <TouchableOpacity style={[styles.linksButton, linksButtonBgColor]} onPress={() => openUrl(constants.SERAPH_WEBSITE_LINK)}>
           <FontAwesome5 name="link" size={22} color={"white"} />
         </TouchableOpacity>
-        <TouchableOpacity
-          style={[styles.linksButton, linksButtonBgColor]}
-          onPress={() => openUrl(constants.SERAPH_TELEGRAM_LINK)}
-        >
+        <TouchableOpacity style={[styles.linksButton, linksButtonBgColor]} onPress={() => openUrl(constants.SERAPH_TELEGRAM_LINK)}>
           <FontAwesome5 name="telegram-plane" size={22} color={"white"} />
         </TouchableOpacity>
-        <TouchableOpacity
-          style={[styles.linksButton, linksButtonBgColor]}
-          onPress={() => openUrl(constants.SERAPH_DISCORD_LINK)}
-        >
+        <TouchableOpacity style={[styles.linksButton, linksButtonBgColor]} onPress={() => openUrl(constants.SERAPH_DISCORD_LINK)}>
           <FontAwesome5 name="discord" size={22} color={"white"} />
         </TouchableOpacity>
-        <TouchableOpacity
-          style={[styles.linksButton, linksButtonBgColor]}
-          onPress={() => openUrl(constants.SERAPH_KEYBASE_LINK)}
-        >
+        <TouchableOpacity style={[styles.linksButton, linksButtonBgColor]} onPress={() => openUrl(constants.SERAPH_KEYBASE_LINK)}>
           <FontAwesome5 name="keybase" size={22} color={"white"} />
         </TouchableOpacity>
       </View>
 
       <View style={styles.descriptionWrapper}>
         <Paragraph style={styles.descriptionText}>
-          This application was developed and made available to the Switcheo
-          community by{" "}
+          This application was developed and made available to the Switcheo community by{" "}
           <Anchor href={constants.SERAPH_WEBSITE_LINK}>
             Seraph Staking <FontAwesome5 name="external-link-alt" size={12} />
           </Anchor>
@@ -72,18 +50,10 @@ export function AboutScreen() {
 
       <View style={styles.supportWrapper}>
         <Headline>
-          Want to support us{" "}
-          <FontAwesome5 name="hand-holding-heart" size={22} /> ?
+          Want to support us <FontAwesome5 name="hand-holding-heart" size={22} /> ?
         </Headline>
-        <Paragraph style={styles.supportText}>
-          The easiest way to support us is to dedicate a part of your stake to
-          the Seraph Staking validator!
-        </Paragraph>
-        <Button
-          style={styles.supportBtn}
-          mode="contained"
-          onPress={() => openUrl(`${constants.SERAPH_WEBSITE_LINK}/#stake`)}
-        >
+        <Paragraph style={styles.supportText}>The easiest way to support us is to dedicate a part of your stake to the Seraph Staking validator!</Paragraph>
+        <Button style={styles.supportBtn} mode="contained" onPress={() => openUrl(`${constants.SERAPH_WEBSITE_LINK}/#stake`)}>
           Stake 🖤
         </Button>
       </View>
@@ -98,7 +68,7 @@ export function AboutScreen() {
         </Paragraph>
       </View>
     </ScrollView>
-  );
+  )
 }
 
 const styles = StyleSheet.create({
@@ -172,4 +142,4 @@ const styles = StyleSheet.create({
   ackText: {
     textAlign: "center",
   },
-});
+})

@@ -1,12 +1,11 @@
+import { messages } from "@src/constants"
+import { Screen } from "@src/enums"
+import { useRootDispatch, useRootSelector } from "@src/redux"
+import { updateAddress, updateLaunchScreen } from "@src/redux/modules/app/actions"
 import * as Analytics from "expo-firebase-analytics"
 import React, { useEffect, useState } from "react"
-import { Button, Text, TextInput, Subheading, RadioButton, Caption, useTheme } from "react-native-paper"
-import { Alert, StyleSheet } from "react-native"
-import { View, ScrollView } from "react-native"
-import { useRootSelector, useRootDispatch } from "@src/redux"
-import { updateAddress, updateLaunchScreen } from "@src/redux/modules/app/actions"
-import { Screen } from "@src/enums"
-import { messages } from "@src/constants"
+import { Alert, ScrollView, StyleSheet, View } from "react-native"
+import { Button, Caption, RadioButton, Subheading, Text, TextInput, useTheme } from "react-native-paper"
 
 export function SettingsScreen() {
   const { colors } = useTheme()
