@@ -2,7 +2,7 @@
   "expo": {
     "name": "Seraph",
     "slug": "seraph-app",
-    "version": "1.0.0",
+    "version": "2.0.0",
     "orientation": "portrait",
     "icon": "./src/assets/icon-no-alpha.png",
     "splash": {
@@ -16,7 +16,7 @@
     "assetBundlePatterns": ["**/*"],
     "ios": {
       "bundleIdentifier": "org.seraph.app",
-      "buildNumber": "2.0.0",
+      "buildNumber": "200",
       "supportsTablet": false,
       "googleServicesFile": "./GoogleService-Info.plist"
     },
