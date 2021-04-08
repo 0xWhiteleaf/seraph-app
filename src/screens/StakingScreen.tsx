@@ -150,7 +150,7 @@ export function StakingScreen() {
         <Caption>{address ?? "No address"}</Caption>
       </View>
 
-      <View style={styles.tableWrapper}>
+      <View style={[styles.tableWrapper, { marginTop: 6 } ]}>
         <Title>Staked Balance</Title>
         <DataTable>
           <DataTable.Header>
@@ -207,7 +207,7 @@ const styles = StyleSheet.create({
   addressWrapper: {
     flex: 1,
     alignItems: "center",
-    marginBottom: 0,
+    marginBottom: 0
   },
   tableWrapper: {
     flex: 1,

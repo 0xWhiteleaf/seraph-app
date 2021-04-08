@@ -4,7 +4,7 @@
     "slug": "seraph-app",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./src/assets/icon.png",
+    "icon": "./src/assets/icon-no-alpha.png",
     "splash": {
       "image": "./src/assets/splash.png",
       "resizeMode": "contain",

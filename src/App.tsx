@@ -1,10 +1,10 @@
 import * as Analytics from "expo-firebase-analytics"
 import { StatusBar } from "expo-status-bar"
 import React, { useRef, useState } from "react"
-import { NavigationContainer } from "@react-navigation/native"
+import { NavigationContainer, DarkTheme as ReactNavigationDarkTheme } from "@react-navigation/native"
 import { createStackNavigator } from "@react-navigation/stack"
 import { createMaterialBottomTabNavigator } from "@react-navigation/material-bottom-tabs"
-import { DarkTheme, Provider as PaperProvider, Appbar, useTheme } from "react-native-paper"
+import { DarkTheme as ReactNativePaperDarkTheme, Provider as PaperProvider, Appbar, useTheme } from "react-native-paper"
 import { StyleSheet, Image } from "react-native"
 import { Ionicons } from "@expo/vector-icons"
 import { DashboardScreen } from "@src/screens/DashboardScreen"
@@ -30,7 +30,7 @@ function HomeTabs() {
   const { colors } = useTheme()
 
   return (
-    <Tab.Navigator barStyle={{ backgroundColor: colors.surface }} initialRouteName={initialRouteName}>
+    <Tab.Navigator initialRouteName={initialRouteName} barStyle={{ backgroundColor: colors.surface }}>
       <Tab.Screen
         name={constants.SCREEN_HOME_DASHBOARD_ROUTE}
         component={DashboardScreen}
@@ -74,7 +74,7 @@ function AppLoadingWrapper(props: any) {
 
   const dispatch = useRootDispatch()
 
-  const [address, hasWallet] = useWallet({ warnIfNoWallet: false });
+  const [address, hasWallet] = useWallet({ warnIfNoWallet: false })
 
   const startAsync = async () => {
     const appSettings = await getAppSettings()
@@ -84,10 +84,9 @@ function AppLoadingWrapper(props: any) {
     await dispatch(refreshCoinsList())
 
     // analytics
-    if (hasWallet)
-      Analytics.setUserId(address);
+    if (hasWallet) Analytics.setUserId(address)
   }
-  
+
   return <AppLoading startAsync={startAsync} onFinish={() => setIsReady(true)} onError={console.warn} />
 }
 
@@ -96,7 +95,7 @@ export default function App() {
 
   const navigationRef = useRef<any>()
   const routeNameRef = useRef<any>()
-
+  
   return (
     <Provider store={store}>
       {!isReady ? (
@@ -104,6 +103,7 @@ export default function App() {
       ) : (
         <PaperProvider theme={theme}>
           <NavigationContainer
+            theme={ReactNavigationDarkTheme}
             ref={navigationRef}
             onReady={() => (routeNameRef.current = navigationRef.current.getCurrentRoute().name)}
             onStateChange={async () => {
@@ -152,11 +152,11 @@ const styles = StyleSheet.create({
 })
 
 const theme = {
-  ...DarkTheme,
+  ...ReactNativePaperDarkTheme,
   roundness: 10,
   colors: {
-    ...DarkTheme.colors,
-    links: "#1976d2",
+    ...ReactNativePaperDarkTheme.colors,
+    links: "#1976d2"
   },
   /*
   colors: {
